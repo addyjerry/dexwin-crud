@@ -1,0 +1,7 @@
+dbname= if0_37924265_todos
+
+dbusername = if0_37924265
+
+mysql hostname= sql307.infinityfree.com
+
+dbpassword = UKFNaUd3AQUU
