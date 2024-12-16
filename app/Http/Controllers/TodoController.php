@@ -24,6 +24,18 @@ class TodoController extends Controller
 
       
     }
+    public function test_todo_creation()
+{
+    $response = $this->postJson('/api/todos', [
+        'title' => 'Test Todo',
+        'details' => 'Details of the todo',
+        'status' => 'not started',
+    ]);
+
+    $response->assertStatus(201)
+             ->assertJsonStructure(['id', 'title', 'details', 'status']);
+}
+
     public function search(Request $request){
 
       $query = $request->input('query');
